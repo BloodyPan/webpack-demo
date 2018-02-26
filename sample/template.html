@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" href="//pic7.getremark.com/icon_small.png">
+    <link href="//pic7.getremark.com/bootstrap.min.css" rel="stylesheet">
+    <script src='//pic7.getremark.com/mapbox-gl.min.js'></script>
+    <link href='//pic7.getremark.com/mapbox-gl.min.css' rel='stylesheet'>
+    <% for (var css in htmlWebpackPlugin.files.css) { %><link href="<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet"><% } %>
+    <title></title>
+</head>
+<body>
+<script src="//pic7.getremark.com/jquery.min.js"></script>
+<script src="//pic7.getremark.com/clipboard.min.js"></script>
+<script src="//pic7.getremark.com/fastclick.js"></script>
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script type="text/javascript" src="<%=htmlWebpackPlugin.files.chunks[chunk].entry %>"></script><% } %>
+<script type="text/javascript">
+    $(function () {});
+</script>
+</body>
+</html>
